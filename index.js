@@ -36,10 +36,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Use the routes
-app.use('/b6/users', userRoutes);
-app.use('/b6/cart', cartRoutes);
-app.use('/b6/orders', orderRoutes);
-app.use('/b6/products', productRoutes);
+app.use('/users', userRoutes);
+app.use('/cart', cartRoutes);
+app.use('/orders', orderRoutes);
+app.use('/products', productRoutes);
 
 if(require.main === module){
 	app.listen(process.env.PORT || port, () => console.log(`Server running at port ${process.env.PORT || port}`));
