@@ -28,7 +28,7 @@ app.use(express.urlencoded({extended:true}));
 const port = 3000;
 
 const corsOptions = {
-	origin: ['http://localhost:8000', 'http://localhost:3000'],
+	origin: ['http://localhost:8000', 'http://localhost:3000', 'https://e-commerce-app-client-rust.vercel.app'],
 	credentials: true,
 	optionsSuccessStatus: 200
 }
