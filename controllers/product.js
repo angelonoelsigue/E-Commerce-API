@@ -52,7 +52,6 @@ module.exports.updateProduct = (req, res) => {
   Product.findByIdAndUpdate(req.params.productId, updatedData, { new: true })
     .then(product => {
       if (product) {
-        res.status(200).send({ sucess: true, message: 'Product updated successfully' });
         res.status(200).send({ success: true, message: 'Product updated successfully' });
       } else {
         res.status(404).send({ error: 'Product not found' });
@@ -66,7 +65,6 @@ module.exports.archiveProduct = (req, res) => {
   Product.findByIdAndUpdate(req.params.productId, { isActive: false }, { new: true })
     .then(product => {
       if (product) {
-        res.status(200).send({ sucess: true, message: 'Product archived successfully' });
         res.status(200).send({ success: true, message: 'Product archived successfully'});
       } else {
         res.status(404).send({ error: 'Product not found' });
